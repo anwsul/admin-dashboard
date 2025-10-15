@@ -14,12 +14,18 @@ body {
 }
 
 button {
-    width: 80px;
+    width: 100px;
     padding: 10px;
     background-color: #2F92D4;
     color: white;
+    font-size: 1rem;
+    font-weight: bold;
     border: none;
     border-radius: 20px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 li {
@@ -42,6 +48,7 @@ li {
     display: flex;
     align-items: center;
     gap: 20px;
+    font-weight: bold;
 }
 
 .side-bar .menu-item > *:hover {
@@ -54,9 +61,10 @@ li {
 }
 
 header {
-    padding: 20px 40px;
+    padding: 20px 60px;
     box-shadow: 0px 0px 10px rgba(125, 125, 125, 0.5);
-    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
 }
 
 header > div {
@@ -69,10 +77,11 @@ header .search-area {
     flex-grow: 1;
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 header .search-area > .search-field {
-    width: 80%;
+    width: 60%;
     height: 30px;
     padding: 10px;
     border: none;
@@ -92,6 +101,14 @@ header .notification-and-profile {
     border-radius: 50%;
 }
 
+.avatar:hover {
+    cursor: pointer;
+}
+
+header .notification-and-profile > p {
+    font-weight: bold;
+}
+
 header .welcome-msg-area {
     display: flex;
     align-items: center;
@@ -103,6 +120,11 @@ header .welcome-msg-area {
     height: 50px;
 }
 
+.welcome-msg-area p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
 header .actions {
     display: flex;
     gap: 20px;
@@ -111,10 +133,13 @@ header .actions {
 .content-area {
     display: grid;
     grid-auto-flow: column;
+    margin: 40px;
+    gap: 40px;
 }
 
-main {
-    margin: 20px;
+main h3,
+.more h3 {
+    line-height: 4rem;
 }
 
 main .cards {
@@ -124,7 +149,6 @@ main .cards {
 }
 
 .card {
-    width: 400px;
     padding: 20px;
     border-left: solid 10px #F0B429;
     border-radius: 5px;
@@ -132,7 +156,7 @@ main .cards {
 }
 
 .card > div:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .card p.description {
@@ -156,8 +180,17 @@ main .cards {
     box-shadow: 0px 0px 10px rgba(125, 125, 125, 0.5);
 }
 
+.announcement-card p {
+    font-size: 12px;
+    color: #757575;
+}
+
 .trending-card > .profile {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.trending-card > .profile .about {
+    color: #757575;
 }
